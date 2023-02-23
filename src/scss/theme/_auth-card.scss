@@ -1,0 +1,53 @@
+.bg-auth-card-overlay{
+  @extend .overlay;
+  &:before{
+   background-color: rgba($gray-200, 0.5) !important;
+   .dark & {
+      background-color: rgba($gray-1100, 0.9) !important;
+   }
+  }
+}
+.auth-card{
+  background-color: $white;
+  .dark & {
+    background-color: $dark-gray-soft;
+  }
+  @include media-breakpoint-between(sm, md){
+    width: 27rem;
+    margin: 0 auto;
+  }
+  .auth-title-box{
+    width: 100%;
+    @include media-breakpoint-up(md){
+      width: 16.875rem;
+    }
+    @include media-breakpoint-up(lg){
+      width: 23.4375rem;
+    }
+    .auth-title-box-img{
+      width: 9.5rem;
+      height: 7.56rem;
+      @include media-breakpoint-up(md){
+        width: 12.5rem;
+        height: 9.875rem;
+      }
+      @include media-breakpoint-up(lg){
+        width: 17.93rem;
+        height: 14.18rem;
+      }
+    }
+  }
+  .auth-form-box{
+    margin: auto;
+    width: 100%;
+    @include media-breakpoint-up(md){
+      max-width: 15.625rem;
+    }
+    @include media-breakpoint-up(lg){
+      max-width: 18.75rem;
+    }
+    @include media-breakpoint-up(xxl){
+      max-width: 25rem;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+extends LayoutTheme
+include ../mixins/navbars/Mixins
+include ../mixins/e-commerce/Topbar
+include ../mixins/e-commerce/Navbar
+include ../mixins/e-commerce/homepage/Footer
+
+append variables
+  - var attrsBody = {  };
+  - var breakPoint = 'lg';
+
+block mainContent
+  +Section(null,'container-small').py-0
+    +Topbar
+  +Navbar
+  block ecomContent
+  
+  +Section(null,'container-small').bg-100.dark__bg-1100
+    +EcomFooter
+  +Footer

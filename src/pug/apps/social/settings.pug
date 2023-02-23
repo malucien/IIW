@@ -1,0 +1,56 @@
+extends ../../layouts/LayoutTheme
+include ../../mixins/social/Feed
+include ../../mixins/social/Settings
+
+
+append variables
+
+block content
+  .mb-9
+    .row.g-6
+      .col-12.col-xl-4
+        +SettingsProfileCard.mb-5
+        +LeftSidebar
+      .col-12.col-xl-8
+        .border-bottom.border-300.mb-4
+          +PersonalInformation
+          .row.g-3.mb-6
+            .col-12.col-sm-6
+              +CompanyInfo
+            .col-12.col-sm-6
+              +ChangePassword
+          .mb-6
+            +Social
+          .text-end.mb-6
+            div
+              button.btn.btn-phoenix-secondary.me-2 Cancel Changes
+              button.btn.btn-phoenix-primary Save Information
+        .row.gy-5
+          .col-12.col-md-6
+            h4.text-black Transfer Ownership
+            p.text-700 Transfer this account to another person or to a company repository.
+            button.btn.btn-phoenix-warning Transfer
+          .col-12.col-md-6
+            h4.text-black Account Deletion
+            p.text-700 Transfer this account to another person or to a company repository.
+            button.btn.btn-phoenix-danger Delete account
+  
+
+
+
+
+
+//- extends ../../layouts/LayoutTheme
+//- include ../../mixins/social/Feed
+
+//- prepend styles
+//-   link(href=`${CWD}vendors/glightbox/glightbox.min.css`, rel='stylesheet')
+
+//- prepend scripts
+//-   script(src=`${CWD}vendors/glightbox/glightbox.min.js`) 
+
+//- block content
+//-   .pb-9
+//-     .row.gy-3.gx-5.gx-xxl-6
+//-       .col-lg-4.order-1.order-lg-0
+//-         +FeedProfileCard.mb-5
