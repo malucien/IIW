@@ -1,56 +1,27 @@
-## Phoenix, a theme by ThemeWagon team.
+Overview:
+The Case Management Software for IIW is a powerful tool designed to help IIW track and manage all its cases and improve its overall service provision. With this software, IIW will be able to efficiently manage case data, track case progress, generate reports, and more.
 
----
+Features:
 
-Unzip the **Phoenix-v1.6.0.zip** to any folder and open a command line or terminal at that location. theme's dev tools require [Node](https://nodejs.org/en/) and [Git](https://git-scm.com/) . If you do not have them in your machine, please install their latest stable version from their corresponding website. As you have **Node and Git installed and accessible from your terminal or command line**, install [Gulp CLI](https://gulpjs.com/) package globally with the following command:
+Case Management: The software will allow IIW to manage all case-related information, including case history, client details, case progress, and any related documents or files. This will enable IIW to easily track each case, from initial contact to resolution.
 
-```
-npm i gulp-cli -g
-```
+Collaboration: The software will allow multiple users to work on the same case, enabling seamless collaboration and improving communication between team members.
 
-When you’re done, install the rest of the theme’s dependencies with:
+Reporting: The software will generate comprehensive reports on case progress, case statistics, and overall service provision, providing valuable insights to IIW and helping it make informed decisions.
 
-```
-npm i
-```
+Customization: The software will be fully customizable, allowing IIW to tailor it to its specific needs and requirements.
 
-Now run:
+Security: The software will ensure the security of all case data, with features such as password protection, data encryption, and regular backups.
 
-```
-gulp
-```
+Benefits:
+The Case Management Software for IIW will provide the following benefits to IIW:
 
-Running gulp will compile the SCSS, transpile the javascript, copy all required libraries form `node_modules`
-to the corresponding `public/assets/vendors` directory and will open a browser window to `public/index.html`
+Improved Efficiency: With all case data in one place, IIW will be able to easily access and manage it, reducing the time and effort required to handle cases.
 
-All of the following folders are monitored for changes, which will tell the browser to reload automatically after any changes are made:
+Better Communication: The software's collaboration features will improve communication and enable team members to work together more effectively.
 
-```
-public/assets/fonts/
-public/assets/video/
-public/assets/img/
-public/vendors
-src/pug/
-src/scss/
-src/js/
-```
+Informed Decision-Making: The software's reporting capabilities will provide valuable insights into case progress and overall service provision, enabling IIW to make informed decisions.
 
-Now you can edit any pug file from `src/pug`, change SCSS variable with `scss/\_user-variables.scss`, or write your own SCSS code in `scss/\_user.scss` and add or update javaScript from `src/js` directory.
+Enhanced Security: The software's security features will ensure the confidentiality and integrity of all case data, providing peace of mind to IIW and its clients.
 
-**Running the gulp command will discard and regenerate all the files in following directories:**
-
-```
-public/**/*.html
-public/assets/css/
-public/assets/js/
-public/vendors
-```
-
-Hit **Ctrl+C** or just close the command line window to stop the server.
-
-Happy editing!
-
-### Design File
-
-Get the figma design file here:
-[https://www.figma.com/file/OYQ0YylB0NZV92csH51ya1/Phoenix-v1.9.0-(Distributed))](<https://www.figma.com/file/OYQ0YylB0NZV92csH51ya1/Phoenix-v1.9.0-(Distributed))
+Overall, the Case Management Software for IIW is a powerful tool that will enable IIW to efficiently manage all its cases and improve its overall service provision.
