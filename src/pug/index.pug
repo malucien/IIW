@@ -1,0 +1,59 @@
+extends layouts/LayoutTheme
+include mixins/dashboard/common
+include mixins/dashboard/e-commerce/Stats
+include mixins/dashboard/e-commerce/TotalSalesChart
+include mixins/dashboard/e-commerce/StatCard
+include mixins/dashboard/e-commerce/TopRegions
+include mixins/dashboard/e-commerce/LatestReviews
+
+append scripts
+  script(src=`${CWD}vendors/echarts/echarts.min.js`)
+  script(src='https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js')
+  script(src!=`https://maps.googleapis.com/maps/api/js?key=${APIGmap}&callback=revenueMapInit` async)
+  script(src=`${CWD}assets/js/ecommerce-dashboard.js`)
+
+block content
+  .pb-5
+    .row.g-4
+      .col-12.col-xxl-6
+        .mb-8
+          h2.mb-2 Ecommerce Dashboard
+          h5.text-700.fw-semi-bold Here’s what’s going on at your business right now
+        +Stats
+        hr.bg-200.mb-6.mt-4
+        +TotalSalesChart
+      .col-12.col-xxl-6
+        .row.g-3
+          .col-12.col-md-6
+            +TotalOrders
+          .col-12.col-md-6
+            +NewCustomers
+          .col-12.col-md-6
+            +TopCoupons
+          .col-12.col-md-6
+            +PayingCustomer
+  .mx-n4.px-4.mx-lg-n6.px-lg-6.bg-white.pt-7.border-y.border-300
+    +LatestReviews
+  .row.gx-6
+    .col-12.col-xl-6
+      .mb-5.mt-7
+        h3 Top regions by revenue
+        p.text-700 Where you generated most of the revenue
+      +TopRegionsTable
+    .col-12.col-xl-6
+      .mx-n4.mx-lg-n6.ms-xl-0.h-100
+        .h-100.w-100.py-5
+          .googlemap.revenue-map.h-100(style="min-height: 300px;")
+  .mx-n4.px-4.mx-lg-n6.px-lg-6.bg-white.pt-6.pb-9.border-top.border-300
+    .row.g-6
+      .col-12.col-xl-6
+        .me-xl-4
+          div
+            h3 Projection vs actual
+            p.mb-1.text-700 Actual earnings vs projected earnings
+          .echart-projection-actual(style='height:300px; width:100%' data-echart-responsive)
+      .col-12.col-xl-6
+        div
+          h3 Returning customer rate
+          p.mb-1.text-700 Rate of customers returning to your shop over time
+        .echart-returning-customer(style='height:300px;' data-echart-responsive)

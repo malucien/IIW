@@ -1,0 +1,58 @@
+extends ../../../layouts/LayoutComponent
+
+append variables
+
+  -
+    var pageHeader = {
+      title: 'Advance Select',
+      description: `${name} uses <b>Choices.js</b> for advance select. Choices.js is a lightweight, configurable select box/text input plugin. Similar to Select2 and Selectize but without the jQuery dependency`,
+      url: `https://github.com/Choices-js/Choices`,
+      linkText: 'Documentation for Choices',
+    }
+  
+prepend styles
+  link(href=`${CWD}vendors/choices/choices.min.css`, rel='stylesheet')
+
+prepend scripts
+  script(src=`${CWD}vendors/choices/choices.min.js`)
+
+
+block component
+  +ComponentCard({
+    title: 'Multiple Select Example',
+    anchor: true,
+  }).mb-3.mt-6
+    label(for="organizerMultiple") Multiple
+    select.form-select#organizerMultiple(data-choices multiple data-options!={removeItemButton: true,placeholder: true})
+      option(value="") Select organizer...
+      option Massachusetts Institute of Technology
+      option University of Chicago
+      option GSAS Open Labs At Harvard
+      option California Institute of Technology
+  
+  +ComponentCard({
+    title: 'Single Select Example',
+    anchor: true,
+  }).mb-4
+    label(for="organizerSingle") Single
+    select.form-select#organizerSingle( data-choices  data-options!={removeItemButton: true,placeholder: true})
+      option(value="") Select organizer...
+      option Massachusetts Institute of Technology
+      option University of Chicago
+      option GSAS Open Labs At Harvard
+      option California Institute of Technology
+
+  
+  +ComponentCard({
+    title: 'Stylesheet',
+    hideNavTab: true
+  }).my-4
+    +ComponentCardLib
+      link(href=`vendors/choices/choices.min.css`, rel='stylesheet')
+
+  +ComponentCard({
+    title: 'Javascript',
+    hideNavTab: true
+  }).my-4
+    +ComponentCardLib
+      script(src=`vendors/choices/choices.min.js`)

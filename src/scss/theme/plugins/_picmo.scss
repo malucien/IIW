@@ -1,0 +1,68 @@
+.dark .popupContainer.light {
+  @extend .dark;
+}
+
+.popupContainer {
+  z-index: 9999;
+  // .light {
+  //   @extend .dark;
+  // }
+}
+.picmo-picker.picker {
+  width: 300px;
+  --background-color: var(--#{$prefix}gray-soft);
+  --border-color: var(--#{$prefix}gray-300);
+
+  --category-tab-active-color: var(--#{$prefix}gray-300);
+  --category-tab-active-color: var(--#{$prefix}gray-300);
+  --category-tab-highlight-background-color: var(--#{$prefix}gray-200);
+  --category-tab-color: var(--#{$prefix}gray-900);
+  --text-color: var(--#{$prefix}body-color);
+  --search-background-color: var(--#{$prefix}white);
+
+  section {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .header {
+    --secondary-background-color: var(--#{$prefix}gray-soft);
+  }
+  .preview {
+    --preview-background-color: var(--#{$prefix}gray-soft);
+  }
+  .emojiCategory {
+    .categoryName {
+      --category-name-background-color: var(--#{$prefix}gray-soft);
+      --category-name-text-color: var(--#{$prefix}gray-600);
+      font-size: map-get($font-sizes, '-2');
+      font-weight: 600;
+    }
+  }
+
+  .emojiButton:hover {
+    --hover-background-color: var(--#{$prefix}gray-200);
+  }
+
+  .content {
+    min-height: unset !important;
+    padding: unset !important;
+  }
+
+  .searchContainer .searchField {
+    border: 1px solid var(--#{$prefix}gray-200);
+    border-radius: 0.375rem;
+    padding: 1rem;
+  }
+
+  .categoryButtons .categoryTab button.categoryButton {
+    font-size: 1rem;
+  }
+  .categoryButtons .categoryTab.categoryTabActive .categoryButton {
+    border: unset;
+    background: unset;
+    color: $primary;
+    &:hover {
+      background: var(--#{$prefix}gray-200);
+    }
+  }
+}

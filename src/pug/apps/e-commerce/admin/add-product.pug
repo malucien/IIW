@@ -1,0 +1,87 @@
+extends ../../../layouts/LayoutTheme
+include ../../../mixins/dashboard/common
+include ../../../mixins/e-commerce/order-details/OrderTable
+include ../../../mixins/e-commerce/add-product/OrganizeCard
+include ../../../mixins/e-commerce/add-product/VariantCard
+include ../../../mixins/e-commerce/add-product/Pricing
+include ../../../mixins/dashboard/common
+
+prepend styles
+  link(href=`${CWD}vendors/dropzone/dropzone.min.css`, rel='stylesheet')
+  link(href=`${CWD}vendors/choices/choices.min.css`, rel='stylesheet')
+  link(href=`${CWD}vendors/flatpickr/flatpickr.min.css`, rel='stylesheet')
+
+prepend scripts
+  script(src=`${CWD}vendors/tinymce/tinymce.min.js`)
+  script(src=`${CWD}vendors/dropzone/dropzone.min.js`)
+  script(src=`${CWD}vendors/choices/choices.min.js`)
+
+
+append variables
+  - 
+    var breadcrumb = [
+      {
+        label: 'Page 1',
+        href: '#!',
+      },
+      {
+        label: 'Page 2',
+        href: '#!',
+      },
+      {
+        label: 'Default',
+        href: '#!',
+        active: true
+      },
+    ];
+
+block content
+  form.mb-9
+    .row.g-3.flex-between-end.mb-5
+      .col-auto
+        h2.mb-2 Add a product
+        h5.text-700.fw-semi-bold Orders placed across your store
+      .col-auto
+        button.btn.btn-phoenix-secondary.me-2.mb-2.mb-sm-0(type='button') Discard
+        button.btn.btn-phoenix-primary.me-2.mb-2.mb-sm-0(type='button') Save draft
+        button.btn.btn-primary.mb-2.mb-sm-0(type='submit') Publish product
+    h4.mb-3 Product Title
+    .row.g-5
+      .col-12.col-xl-8
+        input.form-control.mb-5(type='text', placeholder='Write title here...')
+        .mb-6
+          h4.mb-3  Product Description
+          textarea.tinymce(name='content' data-tinymce!={height: '15rem', placeholder: 'Write a description here...',})
+        
+        h4.mb-3 Display images
+        .dropzone.dropzone-multiple.p-0.mb-5#my-awesome-dropzone(data-dropzone)
+          .fallback
+            input(name='file' type='file', multiple)
+          .dz-preview.d-flex.flex-wrap
+            .border.bg-white.rounded-3.d-flex.flex-center.position-relative.me-2.mb-2(style='height:80px;width:80px;')
+              img(src=`${CWD}assets/img/products/23.png` alt="..." data-dz-thumbnail).dz-image
+              a(href="#!" data-dz-remove).dz-remove.text-400
+                span(data-feather='x')
+          .dz-message.text-600(data-dz-message) 
+            | Drag your photo here
+            span.text-800 or
+            button.btn.btn-link.p-0(type='button') Browse from device
+            br
+            img.mt-3(src=`${CWD}assets/img/icons/image-icon.png`, width=40 alt="").me-2
+        
+        h4.mb-3 Inventory
+        +Pricing
+        
+      .col-12.col-xl-4
+        .row.g-2
+          .col-12.col-xl-12
+            +OrganizeCard.mb-3
+          .col-12.col-xl-12
+            +VariantCard
+
+      
+    
+
+
+
+

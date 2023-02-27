@@ -1,0 +1,163 @@
+extends ../layouts/LayoutTheme
+include ../mixins/dashboard/common
+include ../mixins/dashboard/CRM/Crm
+
+prepend styles
+
+prepend scripts
+	script(src=`${CWD}vendors/echarts/echarts.min.js`)
+	
+append scripts
+	script(src=`${CWD}assets/js/crm-dashboard.js`)
+
+block content
+	.row.gy-3.mb-4.justify-content-between
+		.col-xxl-6
+			h2.mb-2.text-1100 CRM Dashboard
+			h5.text-700.fw-semi-bold.mb-4 Check your business growth in one place
+			.row.g-3.mb-3
+				.col-sm-6.col-md-4.col-xl-3.col-xxl-4
+					.card.h-100
+						.card-body
+							.d-flex.d-sm-block.justify-content-between
+								.border-bottom-sm.mb-sm-4
+									.d-flex.align-items-center
+										.d-flex.align-items-center.icon-wrapper-sm.shadow-primary-100(style="transform: rotate(-7.45deg);")
+											span.fa-solid.fa-phone-alt.text-primary.fs-1.z-index-1.ms-2
+										p.text-700.fs--1.mb-0.ms-2.mt-3 Outgoing call
+									p.text-primary.mt-2.fs-2.fw-bold.mb-0.mb-sm-4 3 
+										span.fs-0.text-900.lh-lg Leads Today
+								.d-flex.flex-column.justify-content-center.flex-between-end.d-sm-block.text-end.text-sm-start
+									span.badge.badge-phoenix.badge-phoenix-success.fs--2.mb-2 +24.5%
+									p.mb-0.fs--1.text-700 Than Yesterday
+				.col-sm-6.col-md-4.col-xl-3.col-xxl-4
+					.card.h-100
+						.card-body
+							.d-flex.d-sm-block.justify-content-between
+								.border-bottom-sm.mb-sm-4
+									.d-flex.align-items-center
+										.d-flex.align-items-center.icon-wrapper-sm.shadow-info-100(style="transform: rotate(-7.45deg);")
+											span.fa-solid.fa-calendar.text-info.fs-1.z-index-1.ms-2
+										p.text-700.fs--1.mb-0.ms-2.mt-3 Outgoing call
+									p.text-info.mt-2.fs-2.fw-bold.mb-0.mb-sm-4 12 
+										span.fs-0.text-900.lh-lg This Week
+								.d-flex.flex-column.justify-content-center.flex-between-end.d-sm-block.text-end.text-sm-start
+									span.badge.badge-phoenix.badge-phoenix-warning.fs--2.mb-2 +24.5%
+									p.mb-0.fs--1.text-700 Than last week
+				.col-md-4.col-xl-6.col-xxl-4.gy-5.gy-md-3
+					.border-bottom
+						h5.pb-4.border-bottom Top 5 Lead Sources
+						ul.list-group.list-group-flush
+							li.list-group-item.bg-transparent.list-group-crm.fw-bold.text-900.fs--1.py-2
+								.d-flex.justify-content-between
+									span.fw-normal.fs--1.mx-1 
+										span.fw-bold 1. 
+										| None 
+									span (65)
+							li.list-group-item.bg-transparent.list-group-crm.fw-bold.text-900.fs--1.py-2  
+								.d-flex.justify-content-between
+									span.fw-normal.mx-1
+										span.fw-bold 2. 
+										| Online Store
+									span (74)
+							li.list-group-item.bg-transparent.list-group-crm.fw-bold.text-900.fs--1.py-2 
+								.d-flex.justify-content-between
+									span.fw-normal.fs--1.mx-1
+										span.fw-bold 3.
+										|  Advertisement
+									span (32)
+							li.list-group-item.bg-transparent.list-group-crm.fw-bold.text-900.fs--1.py-2
+								.d-flex.justify-content-between
+									span.fw-normal.fs--1.mx-1
+										span.fw-bold 4. 
+										| Seminar Partner
+									span (25)
+							li.list-group-item.bg-transparent.list-group-crm.fw-bold.text-900.fs--1.py-2
+								.d-flex.justify-content-between
+									span.fw-normal.fs--1.mx-1  
+										span.fw-bold 5. 
+										| Partner
+									span (23)
+		.col-xxl-6.mb-4
+			h3 Contacts Created
+			p.text-700.mb-1 Payment received across all channels
+			.echart-contacts-created(style='min-height:270px; width:100%' data-echart-responsive)
+		.col-12.col-xxl-6.mb-3.mb-sm-0
+			.row
+				.col-sm-7.col-md-8.col-xxl-8.mb-md-3.mb-lg-0
+					h3 New Contacts by Source
+					p.text-700 Payment received across all channels
+					+ContactBySources
+				.col-sm-5.col-md-4.col-xxl-4.my-3.my-sm-0
+					.position-relative.d-flex.flex-center.mb-sm-4.mb-xl-0.echart-contact-by-source-container.mt-sm-7.mt-lg-4.mt-xl-0
+						.echart-contact-by-source(style='min-height:245px;width:100%')
+						.position-absolute.rounded-circle.bg-primary-100.top-50.start-50.translate-middle.d-flex.flex-center(style="height:100px; width:100px;")
+							h3.mb-0.text-primary-600.dark__text-primary-300.fw-bolder(data-label)
+		.col-12.col-xxl-6.mb-4
+			.mb-3
+				h3 New Users &amp; Leads
+				p.text-700.mb-0 Payment received across all channels
+			.row.g-6
+				.col-md-6.mb-2.mb-sm-0
+					.d-flex.align-items-center
+						span.me-2.text-info(data-feather="users" style="min-height:24px; width:24px")
+						h4.text-600.mb-0 New Users :
+							span.text-1100  42
+						span.badge.badge-phoenix.fs--2.badge-phoenix-success.d-inline-flex.align-items-center.ms-2
+							span.badge-label.d-inline-block.lh-base +24.5%
+							span.ms-1.fa-solid.fa-caret-up.d-inline-block.lh-1
+					.pb-0.pt-4
+						.echarts-new-users(style='min-height:110px;width:100%;' data-echart-responsive='true')
+				.col-md-6
+					.d-flex.align-items-center
+						span.me-2.text-primary(data-feather="zap" style="height:24px; width:24px")
+						h4.text-600.mb-0 New Leads :
+							span.text-1100 45
+						span.badge.badge-phoenix.fs--2.badge-phoenix-success.d-inline-flex.align-items-center.ms-2
+							span.badge-label.d-inline-block.lh-base +30.5%
+							span.ms-1.fa-solid.fa-caret-up.d-inline-block.lh-1
+					.pb-0.pt-4
+						.echarts-new-leads(style='min-height:110px;width:100%;' data-echart-responsive='true')
+
+		.col-12.col-xxl-6
+			.row.align-items-start.justify-content-between.mb-4.g-3
+				.col-auto
+					h3 Add Clicks
+					p.text-700.lh-sm.mb-0 Check effectiveness of your ads
+				.col-12.col-sm-4
+					select.form-select.form-select-sm#select-gross-revenue-month
+						option Mar 1 - 31, 2022
+						option April 1 - 30, 2022
+						option May 1 - 31, 2022
+			.echart-add-clicks-chart(style='min-height:385px;width:100%' data-echart-responsive='true')
+
+		.col-12.col-xxl-6.mb-6.gy-0.gy-xxl-3
+			.row.align-items-start.justify-content-between.mb-4.g-3
+				.col-auto
+					h3 Deal Forecast
+						span.fw-semi-bold - $90,303
+					p.text-700.mb-1 Show what you offer here
+				.col-12.col-sm-4
+					select.form-select.form-select-sm#select-gross-revenue-month
+						option Mar 1 - 31, 2022
+						option April 1 - 30, 2022
+						option May 1 - 31, 2022
+		
+			+DealForecast
+			h4.mt-4.mb-3 Deal Forecast by Owner 
+			+DealForecastTable
+
+	.mx-lg-n4
+		.row.g-3.mb-6.mt-n7
+			.col-xl-5
+				.card.h-100
+					.card-body
+						h3 Lead Conversion
+						p.text-700.mb-0 Stages of deals &amp; conversion
+						.echart-lead-conversion(style="min-height: 250px;" data-echart-responsive)
+			.col-xl-7
+				.card.h-100
+					.card-body
+						h3 Revenue Target
+						p.text-700 Country-wise target fulfilment
+						.echart-revenue-target-conversion(style="min-height: 230px;" data-echart-responsive)

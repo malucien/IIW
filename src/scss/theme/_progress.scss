@@ -1,0 +1,13 @@
+.progress-stack {
+  .progress-bar {
+    margin-left: 1px;
+    margin-right: 1px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
