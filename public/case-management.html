@@ -792,319 +792,227 @@
             </div>
           </div>
         </div>
-        <!--Statistics content start here-->
+        <!--case management contents start here-->
         <div class="content">
-          <div class="pb-5">
-            <div class="row g-4">
-              <div class="col-12 col-xxl-6">
-                <div class="mb-8">
-                  <h2 class="mb-2">Dashboard</h2>
-                  <h5 class="text-700 fw-semi-bold">Here’s what’s going on at IIW now</h5>
-                </div>
-                <div class="row align-items-center g-4">
-                  <div class="col-12 col-md-auto">
-                    <div class="d-flex align-items-center"><img src="assets/img/icons/illustrations/4l.png" alt="" height="46" width="46" />
-                      <div class="ms-3">
-                        <h4 class="mb-0">57 Upcoming Arrivals</h4>
-                        <p class="text-800 fs--1 mb-0">Awating Travelling</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-12 col-md-auto">
-                    <div class="d-flex align-items-center"><img src="assets/img/icons/illustrations/3l.png" alt="" height="46" width="46" />
-                      <div class="ms-3">
-                        <h4 class="mb-0">5 Assured Cases</h4>
-                        <p class="text-800 fs--1 mb-0">Awaiting processing</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-12 col-md-auto">
-                    <div class="d-flex align-items-center"><img src="assets/img/icons/illustrations/2l.png" alt="" height="46" width="46" />
-                      <div class="ms-3">
-                        <h4 class="mb-0">2 Cancelled Cases</h4>
-                        <p class="text-800 fs--1 mb-0">Cancellation</p>
+          <div class="row gy-3 mb-4 justify-content-between">
+            <div class="col-xxl-6">
+              <h2 class="mb-2 text-1100">Case management Dashboard</h2>
+              <h5 class="text-700 fw-semi-bold mb-4">Check your weekly services</h5>
+              <div class="row g-3 mb-3">
+                <div class="col-sm-6 col-md-4 col-xl-3 col-xxl-4">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <div class="d-flex d-sm-block justify-content-between">
+                        <div class="border-bottom-sm mb-sm-4">
+                          <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center icon-wrapper-sm shadow-primary-100" style="transform: rotate(-7.45deg);"><span class="fa-solid fa- text-primary fs-1 z-index-1 ms-2"></span></div>
+                            <p class="text-700 fs--1 mb-0 ms-2 mt-3 text-success">Arrivals</p>
+                          </div>
+                          <p class="text-primary mt-2 fs-2 fw-bold mb-0 mb-sm-4">3 <span class="fs-0 text-900 lh-lg">This Week</span></p>
+                        </div>
+                        <div class="d-flex flex-column justify-content-center flex-between-end d-sm-block text-end text-sm-start"><span class="badge badge-phoenix badge-phoenix-success fs--2 mb-2">+24.5%</span>
+                          <p class="mb-0 fs--1 text-700">Than Last week</p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <hr class="bg-200 mb-6 mt-4" />
-                <div class="row flex-between-center mb-4 g-3">
-                  <div class="col-auto">
-                    <h3>Total Arrivals</h3>
-                    <p class="text-700 lh-sm mb-0">All RNP monthly Arrivals</p>
-                  </div>
-                  <div class="col-8 col-sm-4">
-                    <select class="form-select form-select-sm mt-2" id="select-gross-revenue-month">
-                      <option>Mar 1 - 31, 2023</option>
-                      <option>April 1 - 30, 2023</option>
-                      <option>May 1 - 31, 2023</option>
-                    </select>
+                <div class="col-sm-6 col-md-4 col-xl-3 col-xxl-4">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <div class="d-flex d-sm-block justify-content-between">
+                        <div class="border-bottom-sm mb-sm-4">
+                          <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center icon-wrapper-sm shadow-info-100" style="transform: rotate(-7.45deg);"><span class="fa-solid fa-calendar text-info fs-1 z-index-1 ms-2"></span></div>
+                            <p class="text-700 fs--1 mb-0 ms-2 mt-3 text-danger">Appointments</p>
+                          </div>
+                          <p class="text-info mt-2 fs-2 fw-bold mb-0 mb-sm-4">12 <span class="fs-0 text-900 lh-lg">This Week</span></p>
+                        </div>
+                        <div class="d-flex flex-column justify-content-center flex-between-end d-sm-block text-end text-sm-start"><span class="badge badge-phoenix badge-phoenix-warning fs--2 mb-2">+24.5%</span>
+                          <p class="mb-0 fs--1 text-700">Than last week</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="echart-total-sales-chart" style="min-height:320px;width:100%" data-echart-responsive="data-echart-responsive"></div>
+                <div class="col-md-4 col-xl-6 col-xxl-4 gy-5 gy-md-3">
+                  <div class="border-bottom">
+                    <h5 class="pb-4 border-bottom">Top 5 Lead Services</h5>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item bg-transparent list-group-crm fw-bold text-900 fs--1 py-2">
+                        <div class="d-flex justify-content-between"><span class="fw-normal fs--1 mx-1"> <span class="fw-bold">1. </span>Health screening </span><span>(65)</span></div>
+                      </li>
+                      <li class="list-group-item bg-transparent list-group-crm fw-bold text-900 fs--1 py-2">
+                        <div class="d-flex justify-content-between"><span class="fw-normal mx-1"><span class="fw-bold">2. </span>W2 Appointment</span><span>(74)</span></div>
+                      </li>
+                      <li class="list-group-item bg-transparent list-group-crm fw-bold text-900 fs--1 py-2">
+                        <div class="d-flex justify-content-between"><span class="fw-normal fs--1 mx-1"><span class="fw-bold">3.</span>School enrollment</span><span>(32)</span></div>
+                      </li>
+                      <li class="list-group-item bg-transparent list-group-crm fw-bold text-900 fs--1 py-2">
+                        <div class="d-flex justify-content-between"><span class="fw-normal fs--1 mx-1"><span class="fw-bold">4. </span>Bloodwork</span><span>(25)</span></div>
+                      </li>
+                      <li class="list-group-item bg-transparent list-group-crm fw-bold text-900 fs--1 py-2">
+                        <div class="d-flex justify-content-between"><span class="fw-normal fs--1 mx-1"> <span class="fw-bold">5. </span>Airport pick up</span><span>(23)</span></div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <div class="col-12 col-xxl-6">
-                <div class="row g-3">
-                  <div class="col-12 col-md-6">
-                    <div class="card h-100">
-                      <div class="card-body">
-                        <div class="d-flex justify-content-between">
-                          <div>
-                            <h5 class="mb-1">Total orders<span class="badge badge-phoenix badge-phoenix-warning rounded-pill fs--1 ms-2"><span class="badge-label">-6.8%</span></span></h5>
-                            <h6 class="text-700">Last 7 days</h6>
-                          </div>
-                          <h4>16,247</h4>
-                        </div>
-                        <div class="d-flex justify-content-center px-4 py-6">
-                          <div class="echart-total-orders" style="height:85px;width:115px"></div>
-                        </div>
-                        <div class="mt-2">
-                          <div class="d-flex align-items-center mb-2">
-                            <div class="bullet-item bg-primary me-2"></div>
-                            <h6 class="text-900 fw-semi-bold flex-1 mb-0">Completed</h6>
-                            <h6 class="text-900 fw-semi-bold mb-0">52%</h6>
-                          </div>
-                          <div class="d-flex align-items-center">
-                            <div class="bullet-item bg-primary-100 me-2"></div>
-                            <h6 class="text-900 fw-semi-bold flex-1 mb-0">Pending payment</h6>
-                            <h6 class="text-900 fw-semi-bold mb-0">48%</h6>
-                          </div>
-                        </div>
+            </div>
+            <div class="col-xxl-6 mb-4">
+              <h3>Services Provided</h3>
+              <p class="text-700 mb-1">All the services that were Provided</p>
+              <div class="echart-contacts-created" style="min-height:270px; width:100%" data-echart-responsive="data-echart-responsive"></div>
+            </div>
+            <div class="col-12 col-xxl-6 mb-3 mb-sm-0">
+              <div class="row">
+                <div class="col-sm-7 col-md-8 col-xxl-8 mb-md-3 mb-lg-0">
+                  <h3>Services by programs</h3>
+                  <p class="text-700">Services provided across all programs</p>
+                  <div class="row g-0">
+                    <div class="col-6 col-xl-4">
+                      <div class="d-flex flex-column flex-center align-items-sm-start flex-md-row justify-content-md-between flex-xxl-column p-3 ps-sm-3 ps-md-4 p-md-3 h-100 border-1 border-bottom border-end">
+                        <div class="d-flex align-items-center mb-1"><span class="fa-solid fa-square fs--3 me-2 text-primary" data-fa-transform="up-2"></span><span class="mb-0 fs--1 text-900">MG</span></div>
+                        <h3 class="fw-semi-bold ms-xl-3 ms-xxl-0 pe-md-2 pe-xxl-0 mb-0 mb-sm-3">80</h3>
+                      </div>
+                    </div>
+                    <div class="col-6 col-xl-4">
+                      <div class="d-flex flex-column flex-center align-items-sm-start flex-md-row justify-content-md-between flex-xxl-column p-3 ps-sm-3 ps-md-4 p-md-3 h-100 border-1 border-bottom border-end-md-0 border-end-xl">
+                        <div class="d-flex align-items-center mb-1"><span class="fa-solid fa-square fs--3 me-2 text-success" data-fa-transform="up-2"></span><span class="mb-0 fs--1 text-900">RNP</span></div>
+                        <h3 class="fw-semi-bold ms-xl-3 ms-xxl-0 pe-md-2 pe-xxl-0 mb-0 mb-sm-3">65</h3>
+                      </div>
+                    </div>
+                    <div class="col-6 col-xl-4">
+                      <div class="d-flex flex-column flex-center align-items-sm-start flex-md-row justify-content-md-between flex-xxl-column p-3 ps-sm-3 ps-md-4 p-md-3 h-100 border-1 border-bottom border-end border-end-md border-end-xl-0">
+                        <div class="d-flex align-items-center mb-1"><span class="fa-solid fa-square fs--3 me-2 text-info" data-fa-transform="up-2"></span><span class="mb-0 fs--1 text-900">UHP </span></div>
+                        <h3 class="fw-semi-bold ms-xl-3 ms-xxl-0 pe-md-2 pe-xxl-0 mb-0 mb-sm-3">40</h3>
+                      </div>
+                    </div>
+                    <div class="col-6 col-xl-4">
+                      <div class="d-flex flex-column flex-center align-items-sm-start flex-md-row justify-content-md-between flex-xxl-column p-3 ps-sm-3 ps-md-4 p-md-3 h-100 border-1 border-end-xl border-bottom border-bottom-xl-0">
+                        <div class="d-flex align-items-center mb-1"><span class="fa-solid fa-square fs--3 me-2 text-info-300" data-fa-transform="up-2"></span><span class="mb-0 fs--1 text-900">Social</span></div>
+                        <h3 class="fw-semi-bold ms-xl-3 ms-xxl-0 pe-md-2 pe-xxl-0 mb-0 mb-sm-3">220</h3>
+                      </div>
+                    </div>
+                    <div class="col-6 col-xl-4">
+                      <div class="d-flex flex-column flex-center align-items-sm-start flex-md-row justify-content-md-between flex-xxl-column p-3 ps-sm-3 ps-md-4 p-md-3 h-100 border-1 border-end">
+                        <div class="d-flex align-items-center mb-1"><span class="fa-solid fa-square fs--3 me-2 text-danger-200" data-fa-transform="up-2"></span><span class="mb-0 fs--1 text-900">Referrals</span></div>
+                        <h3 class="fw-semi-bold ms-xl-3 ms-xxl-0 pe-md-2 pe-xxl-0 mb-0 mb-sm-3">120</h3>
+                      </div>
+                    </div>
+                    <div class="col-6 col-xl-4">
+                      <div class="d-flex flex-column flex-center align-items-sm-start flex-md-row justify-content-md-between flex-xxl-column p-3 ps-sm-3 ps-md-4 p-md-3 h-100 border-1">
+                        <div class="d-flex align-items-center mb-1"><span class="fa-solid fa-square fs--3 me-2 text-warning-300" data-fa-transform="up-2"></span><span class="mb-0 fs--1 text-900">Others</span></div>
+                        <h3 class="fw-semi-bold ms-xl-3 ms-xxl-0 pe-md-2 pe-xxl-0 mb-0 mb-sm-3">35</h3>
                       </div>
                     </div>
                   </div>
-                  <div class="col-12 col-md-6">
-                    <div class="card h-100">
-                      <div class="card-body">
-                        <div class="d-flex justify-content-between">
-                          <div>
-                            <h5 class="mb-1">New customers<span class="badge badge-phoenix badge-phoenix-warning rounded-pill fs--1 ms-2"> <span class="badge-label">+26.5%</span></span></h5>
-                            <h6 class="text-700">Last 7 days</h6>
-                          </div>
-                          <h4>356</h4>
-                        </div>
-                        <div class="pb-0 pt-4">
-                          <div class="echarts-new-customers" style="height:180px;width:100%;" data-echart-responsive="true"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-12 col-md-6">
-                    <div class="card h-100">
-                      <div class="card-body">
-                        <div class="d-flex justify-content-between">
-                          <div>
-                            <h5 class="mb-2">Top coupons</h5>
-                            <h6 class="text-700">Last 7 days</h6>
-                          </div>
-                        </div>
-                        <div class="pb-4 pt-3">
-                          <div class="echart-top-coupons" style="height:115px;width:100%;"></div>
-                        </div>
-                        <div>
-                          <div class="d-flex align-items-center mb-2">
-                            <div class="bullet-item bg-primary me-2"></div>
-                            <h6 class="text-900 fw-semi-bold flex-1 mb-0">Percentage discount</h6>
-                            <h6 class="text-900 fw-semi-bold mb-0">72%</h6>
-                          </div>
-                          <div class="d-flex align-items-center mb-2">
-                            <div class="bullet-item bg-primary-200 me-2"></div>
-                            <h6 class="text-900 fw-semi-bold flex-1 mb-0">Fixed card discount</h6>
-                            <h6 class="text-900 fw-semi-bold mb-0">18%</h6>
-                          </div>
-                          <div class="d-flex align-items-center">
-                            <div class="bullet-item bg-info-500 me-2"></div>
-                            <h6 class="text-900 fw-semi-bold flex-1 mb-0">Fixed product discount</h6>
-                            <h6 class="text-900 fw-semi-bold mb-0">10%</h6>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-12 col-md-6">
-                    <div class="card h-100">
-                      <div class="card-body d-flex flex-column">
-                        <div class="d-flex justify-content-between">
-                          <div>
-                            <h5 class="mb-2">Paying vs non paying</h5>
-                            <h6 class="text-700">Last 7 days</h6>
-                          </div>
-                        </div>
-                        <div class="d-flex justify-content-center pt-3 flex-1">
-                          <div class="echarts-paying-customer-chart" style="height:100%;width:100%;"></div>
-                        </div>
-                        <div class="mt-3">
-                          <div class="d-flex align-items-center mb-2">
-                            <div class="bullet-item bg-primary me-2"></div>
-                            <h6 class="text-900 fw-semi-bold flex-1 mb-0">Paying customer</h6>
-                            <h6 class="text-900 fw-semi-bold mb-0">30%</h6>
-                          </div>
-                          <div class="d-flex align-items-center">
-                            <div class="bullet-item bg-primary-100 me-2"></div>
-                            <h6 class="text-900 fw-semi-bold flex-1 mb-0">Non-paying customer</h6>
-                            <h6 class="text-900 fw-semi-bold mb-0">70%</h6>
-                          </div>
-                        </div>
-                      </div>
+                </div>
+                <div class="col-sm-5 col-md-4 col-xxl-4 my-3 my-sm-0">
+                  <div class="position-relative d-flex flex-center mb-sm-4 mb-xl-0 echart-contact-by-source-container mt-sm-7 mt-lg-4 mt-xl-0">
+                    <div class="echart-contact-by-source" style="min-height:245px;width:100%"></div>
+                    <div class="position-absolute rounded-circle bg-primary-100 top-50 start-50 translate-middle d-flex flex-center" style="height:100px; width:100px;">
+                      <h3 class="mb-0 text-primary-600 dark__text-primary-300 fw-bolder" data-label="data-label"></h3>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="row gx-6">
-            <div class="col-12">
-              <div class="mb-5 mt-7">
-                <h3>Top regions by Arrival</h3>
-                <p class="text-700">Where you recieved most of the arrival</p>
+            <div class="col-12 col-xxl-6 mb-6 gy-0 gy-xxl-3">
+              <div class="row align-items-start justify-content-between mb-4 g-3">
+                <div class="col-auto">
+                  <h3>Arrival Forecast<span class="fw-semi-bold">- 1000</span></h3>
+                  <p class="text-700 mb-1">Projected Arrivals</p>
+                </div>
+                <div class="col-12 col-sm-4">
+                  <select class="form-select form-select-sm" id="select-gross-revenue-month">
+                    <option>Mar 1 - 31, 2023</option>
+                    <option>April 1 - 30, 2023</option>
+                    <option>May 1 - 31, 2023</option>
+                  </select>
+                </div>
               </div>
-              <div class="table-responsive scrollbar">
-                <table class="table fs--2 mb-0">
-                  <thead>
-                    <tr>
-                      <th class="border-top border-200 ps-0 align-middle" scope="col" style="width:32%">COUNTRY</th>
-                      <th class="border-top border-200 align-middle" scope="col" style="width:17%">USERS</th>
-                      <th class="border-top border-200 text-end align-middle" scope="col" style="width:16%">TRANSACTIONS</th>
-                      <th class="border-top border-200 text-end align-middle" scope="col" style="width:20%">REVENUE</th>
-                      <th class="border-top border-200 text-end pe-0 align-middle" scope="col" style="width:17%">CONV. RATE</th>
-                    </tr>
-                  </thead>
-                  <tbody class="list">
-                    <tr>
-                      <td></td>
-                      <td class="align-middle py-4">
-                        <h4 class="mb-0 fw-normal">377,620</h4>
-                      </td>
-                      <td class="align-middle text-end py-4">
-                        <h4 class="mb-0 fw-normal">236</h4>
-                      </td>
-                      <td class="align-middle text-end py-4">
-                        <h4 class="mb-0 fw-normal">$15,758</h4>
-                      </td>
-                      <td class="align-middle text-end py-4 pe-0">
-                        <h4 class="mb-0 fw-normal">10.32%</h4>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="white-space-nowrap ps-0" style="width:32%">
-                        <div class="d-flex align-items-center">
-                          <h6 class="mb-0 me-3">1. </h6><a href="#!">
-                            <div class="d-flex align-items-center"><img src="assets/img/country/india.png" alt="" width="24" />
-                              <p class="mb-0 ps-3 text-primary fw-bold fs--1">India</p>
-                            </div>
-                          </a>
-                        </div>
-                      </td>
-                      <td class="align-middle" style="width:17%">
-                        <h6 class="mb-0">92896<span class="text-700 fw-semi-bold ms-2">(41.6%)</span></h6>
-                      </td>
-                      <td class="align-middle text-end" style="width:17%">
-                        <h6 class="mb-0">67<span class="text-700 fw-semi-bold ms-2">(34.3%)</span></h6>
-                      </td>
-                      <td class="align-middle text-end" style="width:17%">
-                        <h6 class="mb-0">$7560<span class="text-700 fw-semi-bold ms-2">(36.9%)</span></h6>
-                      </td>
-                      <td class="align-middle text-end pe-0" style="width:17%">
-                        <h6>14.01%</h6>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="white-space-nowrap ps-0" style="width:32%">
-                        <div class="d-flex align-items-center">
-                          <h6 class="mb-0 me-3">2. </h6><a href="#!">
-                            <div class="d-flex align-items-center"><img src="assets/img/country/china.png" alt="" width="24" />
-                              <p class="mb-0 ps-3 text-primary fw-bold fs--1">China</p>
-                            </div>
-                          </a>
-                        </div>
-                      </td>
-                      <td class="align-middle" style="width:17%">
-                        <h6 class="mb-0">50496<span class="text-700 fw-semi-bold ms-2">(32.8%)</span></h6>
-                      </td>
-                      <td class="align-middle text-end" style="width:17%">
-                        <h6 class="mb-0">54<span class="text-700 fw-semi-bold ms-2">(23.8%)</span></h6>
-                      </td>
-                      <td class="align-middle text-end" style="width:17%">
-                        <h6 class="mb-0">$6532<span class="text-700 fw-semi-bold ms-2">(26.5%)</span></h6>
-                      </td>
-                      <td class="align-middle text-end pe-0" style="width:17%">
-                        <h6>23.56%</h6>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="white-space-nowrap ps-0" style="width:32%">
-                        <div class="d-flex align-items-center">
-                          <h6 class="mb-0 me-3">3. </h6><a href="#!">
-                            <div class="d-flex align-items-center"><img src="assets/img/country/usa.png" alt="" width="24" />
-                              <p class="mb-0 ps-3 text-primary fw-bold fs--1">USA</p>
-                            </div>
-                          </a>
-                        </div>
-                      </td>
-                      <td class="align-middle" style="width:17%">
-                        <h6 class="mb-0">45679<span class="text-700 fw-semi-bold ms-2">(24.3%)</span></h6>
-                      </td>
-                      <td class="align-middle text-end" style="width:17%">
-                        <h6 class="mb-0">35<span class="text-700 fw-semi-bold ms-2">(19.7%)</span></h6>
-                      </td>
-                      <td class="align-middle text-end" style="width:17%">
-                        <h6 class="mb-0">$5432<span class="text-700 fw-semi-bold ms-2">(16.9%)</span></h6>
-                      </td>
-                      <td class="align-middle text-end pe-0" style="width:17%">
-                        <h6>10.23%</h6>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="white-space-nowrap ps-0" style="width:32%">
-                        <div class="d-flex align-items-center">
-                          <h6 class="mb-0 me-3">4. </h6><a href="#!">
-                            <div class="d-flex align-items-center"><img src="assets/img/country/south-korea.png" alt="" width="24" />
-                              <p class="mb-0 ps-3 text-primary fw-bold fs--1">South Korea</p>
-                            </div>
-                          </a>
-                        </div>
-                      </td>
-                      <td class="align-middle" style="width:17%">
-                        <h6 class="mb-0">36453<span class="text-700 fw-semi-bold ms-2">(19.7%)</span></h6>
-                      </td>
-                      <td class="align-middle text-end" style="width:17%">
-                        <h6 class="mb-0">22<span class="text-700 fw-semi-bold ms-2">(9.54%)</span></h6>
-                      </td>
-                      <td class="align-middle text-end" style="width:17%">
-                        <h6 class="mb-0">$4673<span class="text-700 fw-semi-bold ms-2">(11.6%)</span></h6>
-                      </td>
-                      <td class="align-middle text-end pe-0" style="width:17%">
-                        <h6>8.85%</h6>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="white-space-nowrap ps-0" style="width:32%">
-                        <div class="d-flex align-items-center">
-                          <h6 class="mb-0 me-3">5. </h6><a href="#!">
-                            <div class="d-flex align-items-center"><img src="assets/img/country/vietnam.png" alt="" width="24" />
-                              <p class="mb-0 ps-3 text-primary fw-bold fs--1">Vietnam</p>
-                            </div>
-                          </a>
-                        </div>
-                      </td>
-                      <td class="align-middle" style="width:17%">
-                        <h6 class="mb-0">15007<span class="text-700 fw-semi-bold ms-2">(11.9%)</span></h6>
-                      </td>
-                      <td class="align-middle text-end" style="width:17%">
-                        <h6 class="mb-0">17<span class="text-700 fw-semi-bold ms-2">(6.91%)</span></h6>
-                      </td>
-                      <td class="align-middle text-end" style="width:17%">
-                        <h6 class="mb-0">$2456<span class="text-700 fw-semi-bold ms-2">(10.2%)</span></h6>
-                      </td>
-                      <td class="align-middle text-end pe-0" style="width:17%">
-                        <h6>6.01%</h6>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div class="w-100">
+                <div class="d-flex flex-start">
+                  <p class="mb-2 text-700 fw-semi-bold fs--1" style="width: 20.72%">200</p>
+                  <p class="mb-2 text-700 fw-semi-bold fs--1" style="width: 35.76%">300</p>
+                  <p class="mb-2 text-700 fw-semi-bold fs--1" style="width: 25.38%">250</p>
+                  <p class="mb-2 text-700 fw-semi-bold fs--1" style="width: 25.14%">250</p>
+                </div>
+                <div class="progress mb-3 rounded-3" style="height: 10px;">
+                  <div class="progress-bar border-end border-white border-2" role="progressbar" style="width: 20.72%" aria-valuenow="20.72" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar bg-primary-300 border-end border-white border-2" role="progressbar" style="width: 35.76%" aria-valuenow="35.76" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar bg-success border-end border-white border-2" role="progressbar" style="width: 25.38%" aria-valuenow="25.38" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar bg-info" role="progressbar" style="width: 25.14%" aria-valuenow="25.14" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
               </div>
-              <div class="d-flex align-items-center justify-content-between py-2 fs--1 mb-1">
-                <p class="mb-0 d-none d-sm-block me-3 fw-semi-bold text-900" data-list-info="">1 to 5 <span class="text-600"> Items of </span> 15</p><a class="fw-semi-bold" href="#!" data-list-view="*">View all<span class="fas fa-angle-right ms-2" data-fa-transform="down-1"></span></a>
+              <h4 class="mt-4 mb-3">Arrival Forecast by quarter</h4>
+              <div class="border-top border-bottom-0 border-300" id="dealForecastTable" data-list='{"valueNames":["contact","appointment","qualified","closed-won","contact-sent"]}'>
+                <div class="table-responsive scrollbar">
+                  <table class="table fs--1 mb-0">
+                    <thead>
+                      <tr>
+                        <th class="sort border-end white-space-nowrap align-middle ps-0 text-uppercase text-700" scope="col" data-sort="contact" style="width:15%; min-width:100px">Ethnicity</th>
+                        <th class="sort border-end align-middle text-end px-3 text-uppercase text-700" scope="col" data-sort="First quarter" style="width:15%; min-width:95px">
+                          <div class="d-inline-flex flex-center"><span class="fa-solid fa-square fs--3 text-primary me-2" data-fa-transform="up-2"></span><span class="mb-0 fs--1">1st quarter</span></div>
+                        </th>
+                        <th class="sort border-end align-middle text-end px-3 text-uppercase text-700" scope="col" data-sort="qualified" style="width:20%; min-width:100px">
+                          <div class="d-inline-flex flex-center"><span class="fa-solid fa-square fs--3 text-primary-300 me-2" data-fa-transform="up-2"></span><span class="mb-0 fs--1">2nd quarter</span></div>
+                        </th>
+                        <th class="sort border-end align-middle text-end px-3 text-uppercase text-700" scope="col" data-sort="closed-won" style="width:20%; min-width:100px">
+                          <div class="d-inline-flex flex-center"><span class="fa-solid fa-square fs--3 text-success me-2" data-fa-transform="up-2"></span><span class="mb-0 fs--1">3rd quarter</span></div>
+                        </th>
+                        <th class="sort align-middle text-end px-3 text-uppercase text-700" scope="col" data-sort="contact-sent" style="width:20%; min-width:100px">
+                          <div class="d-inline-flex flex-center"><span class="fa-solid fa-square fs--3 text-info me-2" data-fa-transform="up-2"></span><span class="mb-0 fs--1">4th quarter</span></div>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody class="list" id="table-latest-review-body">
+                      <tr class="hover-actions-trigger btn-reveal-trigger position-static">
+                        <td class="contact border-end align-middle white-space-nowrap py-2 ps-0 px-3"><a class="fw-semi-bold pointers-events-none text-decoration-none" href="#!">Rohingya</a></td>
+                        <td class="appointment border-end align-middle white-space-nowrap text-end fw-semi-bold text-900 py-2 px-3">100</td>
+                        <td class="qualified border-end align-middle white-space-nowrap text-end fw-semi-bold text-900 py-2 px-3">150</td>
+                        <td class="closed-won border-end align-middle white-space-nowrap text-end fw-semi-bold text-900 py-2 px-3">200</td>
+                        <td class="contact-sent border-end-0 align-middle white-space-nowrap text-end fw-semi-bold text-900 px-3 py-2">150</td>
+                      </tr>
+                      <tr class="hover-actions-trigger btn-reveal-trigger position-static">
+                        <td class="contact border-end align-middle white-space-nowrap py-2 ps-0 px-3"><a class="fw-semi-bold pointers-events-none text-decoration-none" href="#!">Burmese</a></td>
+                        <td class="appointment border-end align-middle white-space-nowrap text-end fw-semi-bold text-900 py-2 px-3">50</td>
+                        <td class="qualified border-end align-middle white-space-nowrap text-end fw-semi-bold text-900 py-2 px-3">30</td>
+                        <td class="closed-won border-end align-middle white-space-nowrap text-end fw-semi-bold text-900 py-2 px-3">20</td>
+                        <td class="contact-sent border-end-0 align-middle white-space-nowrap text-end fw-semi-bold text-900 px-3 py-2">10</td>
+                      </tr>
+                      <tr class="hover-actions-trigger btn-reveal-trigger position-static">
+                        <td class="contact border-end align-middle white-space-nowrap py-2 ps-0 px-3"><a class="fw-semi-bold pointers-events-none text-decoration-none" href="#!">Congolese</a></td>
+                        <td class="appointment border-end align-middle white-space-nowrap text-end fw-semi-bold text-900 py-2 px-3">00</td>
+                        <td class="qualified border-end align-middle white-space-nowrap text-end fw-semi-bold text-900 py-2 px-3">40</td>
+                        <td class="closed-won border-end align-middle white-space-nowrap text-end fw-semi-bold text-900 py-2 px-3">30</td>
+                        <td class="contact-sent border-end-0 align-middle white-space-nowrap text-end fw-semi-bold text-900 px-3 py-2">30</td>
+                      </tr>
+                      <tr class="hover-actions-trigger btn-reveal-trigger position-static">
+                        <td class="contact border-end align-middle white-space-nowrap py-2 ps-0 px-3"><a class="fw-semi-bold pointers-events-none text-decoration-none" href="#!">Ukrainian</a></td>
+                        <td class="appointment border-end align-middle white-space-nowrap text-end fw-semi-bold text-900 py-2 px-3">50</td>
+                        <td class="qualified border-end align-middle white-space-nowrap text-end fw-semi-bold text-900 py-2 px-3">70</td>
+                        <td class="closed-won border-end align-middle white-space-nowrap text-end fw-semi-bold text-900 py-2 px-3">60</td>
+                        <td class="contact-sent border-end-0 align-middle white-space-nowrap text-end fw-semi-bold text-900 px-3 py-2">100</td>
+                      </tr>
+                      <tr class="hover-actions-trigger btn-reveal-trigger position-static">
+                        <td class="contact border-end align-middle white-space-nowrap py-2 ps-0 px-3"><a class="fw-semi-bold pointers-events-none text-decoration-none" href="#!">Others</a></td>
+                        <td class="appointment border-end align-middle white-space-nowrap text-end fw-semi-bold text-900 py-2 px-3">3</td>
+                        <td class="qualified border-end align-middle white-space-nowrap text-end fw-semi-bold text-900 py-2 px-3">7</td>
+                        <td class="closed-won border-end align-middle white-space-nowrap text-end fw-semi-bold text-900 py-2 px-3">5</td>
+                        <td class="contact-sent border-end-0 align-middle white-space-nowrap text-end fw-semi-bold text-900 px-3 py-2">00</td>
+                      </tr>
+                      <tr class="hover-actions-trigger btn-reveal-trigger position-static">
+                        <td class="align-middle border-bottom-0 border-end white-space-nowrap text-end fw-bold text-1100 pt-2 lh-sm pb-0 px-3"> </td>
+                        <td class="align-middle border-bottom-0 border-end white-space-nowrap text-end fw-bold text-1100 pt-2 lh-sm pb-0 px-3">200</td>
+                        <td class="align-middle border-bottom-0 border-end white-space-nowrap text-end fw-bold text-1100 pt-2 lh-sm pb-0 px-3">300</td>
+                        <td class="align-middle border-bottom-0 border-end white-space-nowrap text-end fw-bold text-1100 pt-2 lh-sm pb-0 px-3">250</td>
+                        <td class="border-bottom-0 align-middle white-space-nowrap text-end fw-bold text-1100 pt-2 pb-0 px-3">250</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>
